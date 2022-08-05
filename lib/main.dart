@@ -4,7 +4,7 @@ import 'package:article/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'initial_screen.dart';
+import 'features/authentication/screens/initial_screen.dart';
 
 void main() {
   runApp(const ArticleApp(

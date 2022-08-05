@@ -1,6 +1,5 @@
-import 'package:article/initial_screen.dart';
+import 'package:article/features/authentication/screens/initial_screen.dart';
 import 'package:flutter/material.dart';
-import 'utils/modal_route_extension.dart';
 
 const kDeepLinkRoute = 'DeepLinkRoute';
 
@@ -15,18 +14,6 @@ final Map<String, WidgetBuilder> routes = {
   InitialScreen.route: (context) {
     return const InitialScreen();
   },
-  // kDeepLinkRoute: (context) {
-  //   final arguments =
-  //       ModalRoute.of(context).arguments<DeepLinkRouteArguments>()!;
-  //   final uri = Uri.parse(arguments.url);
-  //   final key = '${uri.scheme}://${uri.host}';
-
-  //   // if (links.containsKey(key)) {
-  //   //   return links[key]!(context, uri);
-  //   // }
-
-  //   // return const UnknownErrorScreen();
-  // }
 };
 
 PageRoute<dynamic> defaultOnGenerateRoute(RouteSettings settings) {
