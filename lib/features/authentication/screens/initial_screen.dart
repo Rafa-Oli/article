@@ -1,3 +1,4 @@
+import 'package:article/features/authentication/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class InitialScreen extends StatefulWidget {
@@ -66,14 +67,22 @@ class _InitialScreenState extends State<InitialScreen> {
                         SizedBox(
                           width: double.maxFinite,
                           child: ElevatedButton(
-                              style: ButtonStyle(
-                                  padding: MaterialStateProperty.all(
-                                      const EdgeInsets.all(16)),
-                                  backgroundColor: MaterialStateProperty.all(
-                                    const Color.fromARGB(255, 3, 57, 100),
-                                  )),
-                              onPressed: () {},
-                              child: const Text('Acessar conta')),
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              )),
+                              padding: MaterialStateProperty.all(
+                                  const EdgeInsets.all(16)),
+                              backgroundColor: MaterialStateProperty.all(
+                                const Color.fromARGB(255, 3, 57, 100),
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.pushNamed(context, LoginScreen.route);
+                            },
+                            child: Text('Acessar conta'.toUpperCase()),
+                          ),
                         ),
                         const SizedBox(
                           height: 8,
@@ -81,14 +90,23 @@ class _InitialScreenState extends State<InitialScreen> {
                         SizedBox(
                           width: double.maxFinite,
                           child: ElevatedButton(
-                              style: ButtonStyle(
-                                  padding: MaterialStateProperty.all(
-                                      const EdgeInsets.all(16)),
-                                  backgroundColor: MaterialStateProperty.all(
-                                    const Color.fromARGB(255, 3, 57, 100),
-                                  )),
-                              onPressed: () {},
-                              child: const Text('Criar nova conta')),
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                              ),
+                              padding: MaterialStateProperty.all(
+                                  const EdgeInsets.all(16)),
+                              backgroundColor: MaterialStateProperty.all(
+                                const Color.fromARGB(255, 3, 57, 100),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'Criar nova conta'.toUpperCase(),
+                            ),
+                          ),
                         )
                       ],
                     ),

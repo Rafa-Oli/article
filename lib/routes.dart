@@ -1,5 +1,6 @@
-import 'package:article/features/authentication/screens/initial_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'features/authentication/authentication.dart';
 
 const kDeepLinkRoute = 'DeepLinkRoute';
 
@@ -13,6 +14,9 @@ class DeepLinkRouteArguments {
 final Map<String, WidgetBuilder> routes = {
   InitialScreen.route: (context) {
     return const InitialScreen();
+  },
+  LoginScreen.route: (context) {
+    return const LoginScreen();
   },
 };
 
