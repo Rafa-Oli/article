@@ -1,15 +1,15 @@
 import 'package:article/features/authentication/widgets/header_compact.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
-  static String route = '$LoginScreen';
-  const LoginScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatefulWidget {
+  static String route = '$RegisterScreen';
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -19,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Navigator.pop(context);
         },
         showDivider: false,
-        title: 'Login',
+        title: 'Cadastro',
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'Entre com seu e-mail e senha para acessar sua conta',
+              'Cadastre-se agora mesmo no Design Diário',
               style: theme.textTheme.headline5!.copyWith(
                 color: const Color.fromARGB(255, 3, 57, 100),
               ),
@@ -36,6 +36,15 @@ class _LoginScreenState extends State<LoginScreen> {
             Form(
               child: Column(
                 children: [
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Nome completo',
+                      hintText: 'Digite seu nome',
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 24,
+                  ),
                   TextFormField(
                     decoration: const InputDecoration(
                       labelText: 'E-mail',
@@ -69,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     )),
                 onPressed: () {},
                 child: Text(
-                  'Entrar'.toUpperCase(),
+                  'Cadastrar'.toUpperCase(),
                 ),
               ),
             )

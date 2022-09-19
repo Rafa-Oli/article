@@ -26,8 +26,6 @@ typedef AppRootNavigator = GlobalKey<NavigatorState>;
 class _ArticleAppState extends State<ArticleApp> {
   final AppRootNavigator _navigatorKey = GlobalKey<NavigatorState>();
 
-  StreamSubscription<String?>? _subscription;
-
   @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(

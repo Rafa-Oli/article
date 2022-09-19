@@ -18,6 +18,9 @@ final Map<String, WidgetBuilder> routes = {
   LoginScreen.route: (context) {
     return const LoginScreen();
   },
+  RegisterScreen.route: (context) {
+    return const RegisterScreen();
+  },
 };
 
 PageRoute<dynamic> defaultOnGenerateRoute(RouteSettings settings) {

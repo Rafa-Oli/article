@@ -1,4 +1,4 @@
-import 'package:article/features/authentication/screens/login_screen.dart';
+import 'package:article/features/authentication/authentication.dart';
 import 'package:flutter/material.dart';
 
 class InitialScreen extends StatefulWidget {
@@ -102,7 +102,10 @@ class _InitialScreenState extends State<InitialScreen> {
                                 const Color.fromARGB(255, 3, 57, 100),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, RegisterScreen.route);
+                            },
                             child: Text(
                               'Criar nova conta'.toUpperCase(),
                             ),
