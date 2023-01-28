@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'features/authentication/authentication.dart';
+import 'home.dart';
 
 const kDeepLinkRoute = 'DeepLinkRoute';
 
@@ -20,6 +21,9 @@ final Map<String, WidgetBuilder> routes = {
   },
   RegisterScreen.route: (context) {
     return const RegisterScreen();
+  },
+  HomeScreen.route: (context) {
+    return const HomeScreen();
   },
 };
 

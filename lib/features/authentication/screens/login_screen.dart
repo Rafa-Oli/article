@@ -1,4 +1,5 @@
 import 'package:article/features/authentication/widgets/header_compact.dart';
+import 'package:article/home.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -67,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     backgroundColor: MaterialStateProperty.all(
                       const Color.fromARGB(255, 3, 57, 100),
                     )),
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, HomeScreen.route),
                 child: Text(
                   'Entrar'.toUpperCase(),
                 ),
